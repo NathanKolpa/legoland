@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 // Website Routes
 Route::get('/', "HomeController@index");
+Route::get('/login', "LoginController@loginPage");
+Route::get('/register', "LoginController@registerPage");
 
 // Admin Routes
 Route::get('/admin', "AdminHomeController@index");

@@ -17,19 +17,20 @@ class AddOrders extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('ticket_count')->unsigned();
             $table->foreignId('user_id')
                 ->constrained()
                 ->cascadeOnDelete();
         });
 
-        Schema::create('tickets', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->foreignId('order_id')
-                ->nullable()
-                ->constrained()
-                ->onDelete('set null');
-        });
+//        Schema::create('tickets', function (Blueprint $table) {
+//            $table->id();
+//            $table->timestamps();
+//            $table->foreignId('order_id')
+//                ->nullable()
+//                ->constrained()
+//                ->onDelete('set null');
+//        });
     }
 
     /**
@@ -39,7 +40,7 @@ class AddOrders extends Migration
      */
     public function down()
     {
-        Schema::drop('tickets');
+//        Schema::drop('tickets');
         Schema::drop('orders');
     }
 }
