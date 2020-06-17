@@ -1,0 +1,13 @@
+@import 'font.scss';
+
+body{
+    background-color: rgb(255, 207, 0);
+    font-family: 'Cera Pro';
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
