@@ -19357,10 +19357,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Alwin\Documents\php\laravel\legoland\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\Alwin\Documents\php\laravel\legoland\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! C:\Users\Alwin\Documents\php\laravel\legoland\resources\sass\website.scss */"./resources/sass/website.scss");
-module.exports = __webpack_require__(/*! C:\Users\Alwin\Documents\php\laravel\legoland\resources\sass\admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! D:\repos\PHP\legoland\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\repos\PHP\legoland\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\repos\PHP\legoland\resources\sass\website.scss */"./resources/sass/website.scss");
+module.exports = __webpack_require__(/*! D:\repos\PHP\legoland\resources\sass\admin.scss */"./resources/sass/admin.scss");
 
 
 /***/ })

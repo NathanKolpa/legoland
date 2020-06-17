@@ -1,0 +1,17 @@
+.header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    color: white;
+
+    li {
+        float: left;
+
+        a {
+            display: block;
+            padding: 8px;
+            background-color: red;
+        }
+    }
+}

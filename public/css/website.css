@@ -94,6 +94,24 @@
   font-style: italic;
 }
 
+.header {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  color: white;
+}
+
+.header li {
+  float: left;
+}
+
+.header li a {
+  display: block;
+  padding: 8px;
+  background-color: red;
+}
+
 body {
   background-color: #ffcf00;
   font-family: "Cera Pro";
