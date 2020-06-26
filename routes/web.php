@@ -17,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeController@index");
 Route::get('/login', "LoginController@loginPage");
 Route::get('/register', "LoginController@registerPage");
+Route::get('/orders/create', "OrderController@createOrderPage");
+
+Route::post('/login', "LoginController@loginAction");
+Route::get('/logout', "LoginController@logoutAction");
+Route::post('/users', "LoginController@registerAction");
+Route::post('/orders', "OrderController@addOrderAction");
+Route::post('/cart/items', "OrderController@addToCartAction");
+Route::delete('/cart/items', "OrderController@clearCartAction");
 
 // Admin Routes
 Route::get('/admin', "AdminHomeController@index");
+//Route::get('/admin/orders', "OrderController@manageOrderPage");

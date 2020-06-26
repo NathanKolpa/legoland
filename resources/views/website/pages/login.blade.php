@@ -1,12 +1,8 @@
 @extends('website.layout')
 
 @section('content')
-
-    <form method="POST" action="{{ url('users') }}">
+    <form method="POST" action="{{ url('login') }}">
         @csrf()
-        <label>
-            <input type="text" placeholder="name" name="name">
-        </label>
         <label>
             <input type="email" placeholder="email" name="email">
         </label>

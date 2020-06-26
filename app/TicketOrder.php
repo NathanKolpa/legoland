@@ -6,9 +6,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class TicketOrder extends Authenticatable
 {
     use Notifiable;
+
+    protected $table = 'tickets_orders';
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'is_admin',
+        'order_id', 'ticket_id', 'ticket_count'
     ];
 
     /**
@@ -25,7 +27,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
     ];
 
     /**
@@ -34,11 +35,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
     ];
 
-    public function setPasswordAttribute($password)
+    public function ticket()
     {
-        $this->attributes['password'] = bcrypt($password);
+        return $this->belongsTo('App\Ticket', 'ticket_id');
     }
+
+    public $timestamps = false;
 }

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title> Legoland Doetinchem</title>
-    <link href="{{ asset('css/website.css') }}" rel="stylesheet">
+
+    @yield('styling')
 </head>
 <body>
     @yield('root')
