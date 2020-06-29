@@ -31,6 +31,9 @@ Route::delete('/cart/items', "OrderController@clearCartAction");
 Route::put('/self', "SettingsController@updateUserAction");
 Route::delete('/admin/users/{user}', "AdminUsersController@deleteUser");
 Route::put('/admin/users/{user}', "AdminUsersController@updateUser");
+Route::delete('/admin/orders/{order}', "AdminOrdersController@deleteOrder");
+Route::put('/admin/orders/{order}/items/{ticket}', "AdminOrdersController@updateOrderItem");
+Route::delete('/admin/orders/{order}/items/{ticket}', "AdminOrdersController@deleteOrderItem");
 
 // Admin Routes
 Route::get('/admin', "AdminHomeController@index");
