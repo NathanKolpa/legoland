@@ -8,4 +8,9 @@ class HomeController extends Controller
     {
         return view("website/pages/home");
     }
+
+    public function contactPage()
+    {
+        return view("website/pages/contact");
+    }
 }

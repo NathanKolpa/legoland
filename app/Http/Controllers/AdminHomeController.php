@@ -2,6 +2,9 @@
 namespace App\Http\Controllers;
 
 
+use App\Order;
+use App\User;
+
 class AdminHomeController extends Controller
 {
     public function index()

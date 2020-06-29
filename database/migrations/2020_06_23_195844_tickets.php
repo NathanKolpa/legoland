@@ -20,12 +20,16 @@ class Tickets extends Migration
             $table->boolean('is_finished');
         });
 
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('wants_newsletter')->default(0);
+        });
+
+
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->float('price');
             $table->string('name');
-
         });
 
         Schema::create('tickets_orders', function (Blueprint $table) {

@@ -9,11 +9,6 @@ use App\TicketOrder;
 
 class OrderController extends Controller
 {
-    public function manageOrderPage()
-    {
-        return view('admin.orders');
-    }
-
     public function createOrderPage()
     {
         $order = Order::where('user_id', auth()->user()->id)
@@ -39,10 +34,6 @@ class OrderController extends Controller
             'items' => $items,
             'price' => $price
         ]);
-    }
-
-    public function removeOrder()
-    {
     }
 
     public function clearCartAction()

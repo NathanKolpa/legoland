@@ -18,6 +18,9 @@ Route::get('/', "HomeController@index");
 Route::get('/login', "LoginController@loginPage");
 Route::get('/register', "LoginController@registerPage");
 Route::get('/orders/create', "OrderController@createOrderPage");
+Route::get('/self/settings', "SettingsController@settingsPage");
+Route::get('/contact', "HomeController@contactPage");
+
 
 Route::post('/login', "LoginController@loginAction");
 Route::get('/logout', "LoginController@logoutAction");
@@ -25,7 +28,12 @@ Route::post('/users', "LoginController@registerAction");
 Route::post('/orders', "OrderController@addOrderAction");
 Route::post('/cart/items', "OrderController@addToCartAction");
 Route::delete('/cart/items', "OrderController@clearCartAction");
+Route::put('/self', "SettingsController@updateUserAction");
+Route::delete('/admin/users/{user}', "AdminUsersController@deleteUser");
+Route::put('/admin/users/{user}', "AdminUsersController@updateUser");
 
 // Admin Routes
 Route::get('/admin', "AdminHomeController@index");
-//Route::get('/admin/orders', "OrderController@manageOrderPage");
+Route::get('/admin/orders', "AdminOrdersController@manageOrderPage");
+Route::get('/admin/users', "AdminUsersController@manageUsersPage");
+

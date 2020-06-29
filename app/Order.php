@@ -34,4 +34,14 @@ class Order extends Authenticatable
      */
     protected $casts = [
     ];
+
+    public function ticketOrders()
+    {
+        return $this->hasMany('App\TicketOrder', 'order_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
